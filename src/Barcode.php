@@ -75,17 +75,15 @@ class Barcode implements JsonSerializable
     /**
      * The array representation of barcode.
      *
-     * @return  mixed[][]
+     * @return  mixed[]
      */
     public function toArray(): array
     {
-        $output = [];
-
-        foreach ($this->identifiers->all() as $key => $identifier) {
-            $output[$key] = $identifier->toArray();
-        }
-
-        return $output;
+        return [
+            'value'       => $this->value(),
+            'delimiter'   => $this->delimiter(),
+            'identifiers' => $this->identifiers()->toArray(),
+        ];
     }
 
     /**

@@ -63,4 +63,20 @@ class IdentifierCollection
 
         throw new InvalidArgumentException("Missing identifier with code \"{$code}\".");
     }
+
+    /**
+     * The array representation of identifiers.
+     *
+     * @return  mixed[][]
+     */
+    public function toArray(): array
+    {
+        $identifiers = [];
+
+        foreach ($this->all() as $key => $identifier) {
+            $identifiers[$key] = $identifier->toArray();
+        }
+
+        return $identifiers;
+    }
 }
