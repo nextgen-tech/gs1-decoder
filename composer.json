@@ -1,0 +1,22 @@
+{
+    "name": "nextgen-tech/gs1-decoder",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Krzysztof Grabania",
+            "email": "info@nextgen-tech.pl"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.12.50"
+    },
+    "autoload": {
+        "psr-4": {
+            "NGT\\Barcode\\GS1Decoder\\": "src/"
+        }
+    }
+}
