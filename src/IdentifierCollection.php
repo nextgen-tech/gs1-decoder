@@ -13,7 +13,7 @@ class IdentifierCollection
      *
      * @var  \NGT\Barcode\GS1Decoder\Contracts\Identifier[]
      */
-    private $identifiers = [];
+    private $items = [];
 
     /**
      * Get the list of all identifiers.
@@ -22,7 +22,7 @@ class IdentifierCollection
      */
     public function all(): array
     {
-        return $this->identifiers;
+        return $this->items;
     }
 
     /**
@@ -32,7 +32,7 @@ class IdentifierCollection
      */
     public function add(Identifier $identifier): self
     {
-        $this->identifiers[$identifier->getCode()] = $identifier;
+        $this->items[$identifier->getCode()] = $identifier;
 
         return $this;
     }
@@ -45,7 +45,7 @@ class IdentifierCollection
      */
     public function has(string $code): bool
     {
-        return array_key_exists($code, $this->identifiers);
+        return array_key_exists($code, $this->items);
     }
 
     /**
@@ -58,7 +58,7 @@ class IdentifierCollection
     public function get(string $code): Identifier
     {
         if ($this->has($code)) {
-            return $this->identifiers[$code];
+            return $this->items[$code];
         }
 
         throw new InvalidArgumentException("Missing identifier with code \"{$code}\".");
