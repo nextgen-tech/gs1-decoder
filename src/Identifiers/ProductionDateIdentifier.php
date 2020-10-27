@@ -28,6 +28,6 @@ class ProductionDateIdentifier extends DateIdentifier
      */
     public function getCode(): string
     {
-        return '02';
+        return '11';
     }
 }
