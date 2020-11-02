@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace NGT\Barcode\GS1Decoder;
 
-use InvalidArgumentException;
 use NGT\Barcode\GS1Decoder\Contracts\Identifier;
+use NGT\Barcode\GS1Decoder\Exceptions\MissingIdentifier;
 
 class IdentifierCollection
 {
@@ -53,7 +53,7 @@ class IdentifierCollection
      *
      * @param   string  $code
      * @return  \NGT\Barcode\GS1Decoder\Contracts\Identifier
-     * @throws  InvalidArgumentException
+     * @throws  \NGT\Barcode\GS1Decoder\Exceptions\MissingIdentifier
      */
     public function get(string $code): Identifier
     {
@@ -61,7 +61,7 @@ class IdentifierCollection
             return $this->items[$code];
         }
 
-        throw new InvalidArgumentException("Missing identifier with code \"{$code}\".");
+        throw new MissingIdentifier($code);
     }
 
     /**
