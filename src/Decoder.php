@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace NGT\Barcode\GS1Decoder;
 
-use InvalidArgumentException;
 use NGT\Barcode\GS1Decoder\Contracts\Identifier;
 use NGT\Barcode\GS1Decoder\Contracts\Identifiers\VariableLength;
+use NGT\Barcode\GS1Decoder\Exceptions\InvalidBarcode;
 use NGT\Barcode\GS1Decoder\Identifiers\Abstracts\FloatIdentifier;
 
 class Decoder
@@ -78,7 +78,7 @@ class Decoder
         } while (strlen($this->barcode) > 0);
 
         if ($this->identifierCode === $barcode->value()) {
-            throw new InvalidArgumentException('Invalid barcode.');
+            throw new InvalidBarcode($barcode->value());
         }
 
         return $barcode;
