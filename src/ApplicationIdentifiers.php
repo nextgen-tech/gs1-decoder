@@ -26,10 +26,11 @@ class ApplicationIdentifiers
         Identifiers\VariantIdentifier::class,        // 20
         Identifiers\SerialNumberIdentifier::class,   // 21
 
-        Identifiers\NetWeightKgIdentifier::class,    // 310
-
         Identifiers\OriginIdentifier::class,         // 422
 
+        Identifiers\NetWeightKgIdentifier::class,    // 3100 - 3105
+        Identifiers\PriceIdentifier::class,          // 3920 - 3929
+        Identifiers\PricePerUnitIdentifier::class,   // 8005
         Identifiers\ProductionTimeIdentifier::class, // 8008
     ];
 

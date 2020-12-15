@@ -5,7 +5,7 @@ Basic GS1-128 (EAN128) decoder in PHP.
 ## Installation
 
 ```sh
-composer install nextgen-tech/gs1-decoder
+composer require nextgen-tech/gs1-decoder
 ```
 
 ## Usage
@@ -65,18 +65,24 @@ Array
 
 ## List of implemented identifiers
 
-* 00 - Serial Shipping Container Code
-* 01 - Global Trade Item Number (GTIN)
-* 02 - GTIN of contained trade items
-* 10 - Batch or lot number
-* 11 - Production date
-* 12 - Due date
-* 13 - Packaging date
-* 15 - Best before date
-* 16 - Sell by date
-* 17 - Expiration date
-* 20 - Internal product variant
-* 21 - Serial number
-* 310 - Net weight, kilograms
-* 422 - Country of origin of a trade item
-* 8008 - Date and time of production
+| Identifier  |      Title      | Description                                                                   |
+|:-----------:|-----------------|-------------------------------------------------------------------------------|
+|      00     |       SSCC      | [Serial Shipping Container Code](https://www.gs1.org/standards/barcodes/application-identifiers/00?lang=en)                                                |
+|      01     |       GTIN      | [Global Trade Item Number (GTIN)](https://www.gs1.org/standards/barcodes/application-identifiers/01?lang=en)                                               |
+|      02     |     CONTENT     | [GTIN of contained trade items](https://www.gs1.org/standards/barcodes/application-identifiers/02?lang=en)                                                 |
+|      10     |    BATCH/LOT    | [Batch or lot number](https://www.gs1.org/standards/barcodes/application-identifiers/10?lang=en)                                                           |
+|      11     |    PROD DATE    | [Production date](https://www.gs1.org/standards/barcodes/application-identifiers/11?lang=en)                                                               |
+|      12     |     DUE DATE    | [Due date](https://www.gs1.org/standards/barcodes/application-identifiers/12?lang=en)                                                                      |
+|      13     |    PACK DATE    | [Packaging date](https://www.gs1.org/standards/barcodes/application-identifiers/13?lang=en)                                                                |
+|      15     |   BEST BEFORE   | [Best before date](https://www.gs1.org/standards/barcodes/application-identifiers/15?lang=en)                                                              |
+|      16     |     SELL BY     | [Sell by date](https://www.gs1.org/standards/barcodes/application-identifiers/16?lang=en)                                                                  |
+|      17     |      USE BY     | [Expiration date](https://www.gs1.org/standards/barcodes/application-identifiers/17?lang=en)                                                               |
+|      20     |     VARIANT     | [Internal product variant](https://www.gs1.org/standards/barcodes/application-identifiers/20?lang=en)                                                      |
+|      21     |      SERIAL     | [Serial number](https://www.gs1.org/standards/barcodes/application-identifiers/21?lang=en)                                                                 |
+|     422     |      ORIGIN     | [Country of origin of a trade item](https://www.gs1.org/standards/barcodes/application-identifiers/422?lang=en)                                             |
+| 3100 - 3105 | NET WEIGHT (kg) | [Net weight, kilograms](https://www.gs1.org/standards/barcodes/application-identifiers/3100?lang=en)                                                         |
+| 3920 - 3929 |      PRICE      | [Applicable amount payable, single monetary area (variable measure trade item)](https://www.gs1.org/standards/barcodes/application-identifiers/3920?lang=en) |
+|     8005    |  PRICE PER UNIT | [Price per unit of measure](https://www.gs1.org/standards/barcodes/application-identifiers/8005?lang=en)                                                     |
+|     8008    |    PROD TIME    | [Date and time of production](https://www.gs1.org/standards/barcodes/application-identifiers/8008?lang=en)                                                   |
+
+The list of GS1 Application Identifiers can be found [here](https://www.gs1.org/standards/barcodes/application-identifiers)
