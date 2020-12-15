@@ -7,6 +7,7 @@ use NGT\Barcode\GS1Decoder\Identifiers\Abstracts\FloatIdentifier;
 
 final class NetWeightKgIdentifier extends FloatIdentifier
 {
+
     /**
      * @inheritDoc
      */
@@ -29,6 +30,22 @@ final class NetWeightKgIdentifier extends FloatIdentifier
     public function getCode(): string
     {
         return '310';
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getMinDecimals(): int
+    {
+        return 0;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getMaxDecimals(): int
+    {
+        return 5;
     }
 
     /**

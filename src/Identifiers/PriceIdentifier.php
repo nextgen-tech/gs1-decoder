@@ -35,6 +35,22 @@ final class PriceIdentifier extends FloatIdentifier
     /**
      * @inheritDoc
      */
+    public function getMinDecimals(): int
+    {
+        return 0;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getMaxDecimals(): int
+    {
+        return 9;
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getLength(): int
     {
         return 15;

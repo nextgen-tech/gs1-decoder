@@ -45,6 +45,6 @@ class PricePerUnitIdentifier extends Identifier
      */
     public function getFormat(): string
     {
-        return '/^8005(\d{6})$/';
+        return '/^\d{6}$/';
     }
 }

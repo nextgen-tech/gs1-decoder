@@ -6,6 +6,7 @@ namespace NGT\Barcode\GS1Decoder;
 use NGT\Barcode\GS1Decoder\Contracts\Identifier;
 use NGT\Barcode\GS1Decoder\Contracts\Identifiers\VariableLength;
 use NGT\Barcode\GS1Decoder\Exceptions\InvalidBarcode;
+use NGT\Barcode\GS1Decoder\Exceptions\InvalidDecimalsException;
 use NGT\Barcode\GS1Decoder\Identifiers\Abstracts\FloatIdentifier;
 
 class Decoder
@@ -63,7 +64,9 @@ class Decoder
             }
 
             if ($identifier instanceof FloatIdentifier) {
-                $identifier->setDecimals((int) $this->shift(1));
+                $decimals = (int) $this->shift(1);
+                $this->validateDecimals($identifier, $decimals);
+                $identifier->setDecimals($decimals);
             }
 
             $content = $this->getContent($identifier);
@@ -145,5 +148,15 @@ class Decoder
         }
 
         $this->shift($shiftAmount);
+    }
+
+    private function validateDecimals(Identifier $identifier, int $decimals): void
+    {
+        if ($decimals < $identifier->getMinDecimals()) {
+            throw InvalidDecimalsException::toLow($identifier->getCode(), $decimals);
+        }
+        if ($decimals >  $identifier->getMaxDecimals()) {
+            throw InvalidDecimalsException::toHigh($identifier->getCode(), $decimals);
+        }
     }
 }
