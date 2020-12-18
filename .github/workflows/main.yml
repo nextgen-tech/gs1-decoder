@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-unit:
+    name: Integration tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
+
+      - name: Install composer dependencies
+        run: composer install --prefer-dist --ignore-platform-reqs
+
+      - name: Run PHPUnit Integration tests
+        run: php7.4 ./vendor/bin/phpunit --testsuite=integration
