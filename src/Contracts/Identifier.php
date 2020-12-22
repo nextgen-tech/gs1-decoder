@@ -66,7 +66,7 @@ interface Identifier
      *
      * @return  string|null
      */
-    public function getRawContent();
+    public function getRawContent(): ?string;
 
     /**
      * Get array representation of identifier.
