@@ -37,7 +37,7 @@ abstract class Identifier implements IdentifierContract
     /**
      * @inheritDoc
      */
-    final public function copy(): self
+    final public function copy(): IdentifierContract
     {
         return clone $this;
     }
@@ -45,7 +45,7 @@ abstract class Identifier implements IdentifierContract
     /**
      * @inheritDoc
      */
-    final public function setContent(string $content): self
+    final public function setContent(string $content): IdentifierContract
     {
         $this->content = $content;
 

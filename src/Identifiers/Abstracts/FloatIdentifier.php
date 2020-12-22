@@ -17,7 +17,7 @@ abstract class FloatIdentifier extends Identifier implements WithDecimals
     /**
      * @inheritDoc
      */
-    public function setDecimals(int $decimals): self
+    public function setDecimals(int $decimals): WithDecimals
     {
         $this->decimals = $decimals;
 
