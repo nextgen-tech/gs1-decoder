@@ -155,7 +155,8 @@ class Decoder
         if ($decimals < $identifier->getMinDecimals()) {
             throw InvalidDecimalsException::toLow($identifier->getCode(), $decimals);
         }
-        if ($decimals >  $identifier->getMaxDecimals()) {
+
+        if ($decimals > $identifier->getMaxDecimals()) {
             throw InvalidDecimalsException::toHigh($identifier->getCode(), $decimals);
         }
     }

@@ -7,7 +7,6 @@ use NGT\Barcode\GS1Decoder\Identifiers\Abstracts\FloatIdentifier;
 
 final class NetWeightKgIdentifier extends FloatIdentifier
 {
-
     /**
      * @inheritDoc
      */
