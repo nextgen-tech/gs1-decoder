@@ -1,5 +1,9 @@
 # GS1-128 (EAN128) Decoder Changelog
 
+## v0.3.1 - 2020-12-22
+
+* Fix invalid price parsing (bf4b3d3)
+
 ## v0.3.0 - 2020-12-22
 
 * New identifier: [392] Price (#1)
