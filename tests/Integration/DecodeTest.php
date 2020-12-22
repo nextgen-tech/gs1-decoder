@@ -168,7 +168,7 @@ class DecodeTest extends TestCase
                 '1',
                 1.0,
             ],
-            'Applicable amount payable, single monetary area (variable measure trade item) [1 decimal] ' => [
+            'Applicable amount payable, single monetary area (variable measure trade item) [1 decimal]' => [
                 '3921123',
                 '392',
                 '123',
@@ -233,6 +233,12 @@ class DecodeTest extends TestCase
                 '8008',
                 '201202141523',
                 new DateTime('2020-12-02 14:15:23'),
+            ],
+            'Price [2 decimals] with GTIN' => [
+                '3922123[FNC1]0110107638900343526',
+                '392',
+                '123',
+                1.23
             ],
         ];
     }

@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace NGT\Barcode\GS1Decoder\Identifiers;
 
+use NGT\Barcode\GS1Decoder\Contracts\Identifiers\VariableLength;
 use NGT\Barcode\GS1Decoder\Identifiers\Abstracts\FloatIdentifier;
 
-final class PriceIdentifier extends FloatIdentifier
+final class PriceIdentifier extends FloatIdentifier implements VariableLength
 {
     /**
      * @inheritDoc
