@@ -150,7 +150,7 @@ class Decoder
         $this->shift($shiftAmount);
     }
 
-    private function validateDecimals(Identifier $identifier, int $decimals): void
+    private function validateDecimals(FloatIdentifier $identifier, int $decimals): void
     {
         if ($decimals < $identifier->getMinDecimals()) {
             throw InvalidDecimalsException::toLow($identifier->getCode(), $decimals);

@@ -9,15 +9,30 @@ on:
       - main
 
 jobs:
-  build-unit:
-    name: Integration tests
+  run:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-versions: [ '7.4', '8.0' ]
+    name: PHP ${{ matrix.php-versions }}
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v2
 
-      - name: Install composer dependencies
-        run: composer install --prefer-dist --ignore-platform-reqs
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          tools: composer:v2, phpunit:9.5, phpstan:0.12
+
+      - name: Composer install
+        run: composer install
+
+      - name: Run PHPUnit Unit tests
+        run: phpunit --testsuite=unit
 
       - name: Run PHPUnit Integration tests
-        run: php7.4 ./vendor/bin/phpunit --testsuite=integration
+        run: phpunit --testsuite=integration
+
+      - name: Run PHPStan
+        run: phpstan analyse src
