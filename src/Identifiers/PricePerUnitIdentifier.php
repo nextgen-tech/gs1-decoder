@@ -1,19 +1,19 @@
 <?php
+
 declare(strict_types=1);
 
 namespace NGT\Barcode\GS1Decoder\Identifiers;
 
-use NGT\Barcode\GS1Decoder\Identifiers\Abstracts\FloatIdentifier;
+use NGT\Barcode\GS1Decoder\Identifiers\Abstracts\Identifier;
 
-final class NetWeightKgIdentifier extends FloatIdentifier
+class PricePerUnitIdentifier extends Identifier
 {
-
     /**
      * @inheritDoc
      */
     public function getTitle(): string
     {
-        return 'NET WEIGHT (kg)';
+        return 'PRICE PER UNIT';
     }
 
     /**
@@ -21,7 +21,7 @@ final class NetWeightKgIdentifier extends FloatIdentifier
      */
     public function getName(): string
     {
-        return 'Net weight, kilograms';
+        return 'Price per unit of measure';
     }
 
     /**
@@ -29,23 +29,7 @@ final class NetWeightKgIdentifier extends FloatIdentifier
      */
     public function getCode(): string
     {
-        return '310';
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function getMinDecimals(): int
-    {
-        return 0;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function getMaxDecimals(): int
-    {
-        return 5;
+        return '8005';
     }
 
     /**

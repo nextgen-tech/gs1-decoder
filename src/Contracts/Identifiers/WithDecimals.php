@@ -18,4 +18,18 @@ interface WithDecimals
      * @return  int
      */
     public function getDecimals(): int;
+
+    /**
+     * Get the min supported decimals.
+     *
+     * @return  int
+     */
+    public function getMinDecimals(): int;
+
+    /**
+     * Get the max supported decimals.
+     *
+     * @return  int
+     */
+    public function getMaxDecimals(): int;
 }

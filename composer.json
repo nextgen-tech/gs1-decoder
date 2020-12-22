@@ -12,11 +12,15 @@
         "php": "^7.3|^8.0"
     },
     "require-dev": {
-        "phpstan/phpstan": "^0.12.50"
     },
     "autoload": {
         "psr-4": {
             "NGT\\Barcode\\GS1Decoder\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NGT\\Barcode\\GS1Decoder\\Test\\": "tests/"
         }
     }
 }
