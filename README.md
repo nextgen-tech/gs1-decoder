@@ -8,9 +8,17 @@ Basic GS1-128 (EAN128) decoder in PHP.
 composer require nextgen-tech/gs1-decoder
 ```
 
-Run Tests
----
-We use [act][act] to run tests which runs github actions locally:
+## Run Tests
+
+```bash
+# run PHPUnit tests
+vendor/bin/phpunit
+
+# run PHPStan analyse
+vendor/bin/phpstan analyse
+```
+
+To run all tests automatically on several platforms you can use [act][act], which mimics GitHub Actions locally:
 
 ```bash
 $ act -P ubuntu-latest=shivammathur/node:latest
@@ -93,7 +101,7 @@ Array
 |    8005   |  PRICE PER UNIT | [Price per unit of measure][AI-8005]                                                     |
 |    8008   |    PROD TIME    | [Date and time of production][AI-8008]                                                   |
 
-The list of GS1 Application Identifiers can be found [here](https://www.gs1.org/standards/barcodes/application-identifiers)
+The list of all GS1 Application Identifiers can be found [here](https://www.gs1.org/standards/barcodes/application-identifiers)
 
 [act]: https://github.com/nektos/act
 [AI-00]: https://www.gs1.org/standards/barcodes/application-identifiers/00?lang=en
