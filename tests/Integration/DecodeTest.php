@@ -121,6 +121,11 @@ class DecodeTest extends TestCase
                 '21',
                 '1234ABC',
             ],
+            'Company internal information' => [
+                '01087106420356209135[FNC1]',
+                '91',
+                '35',
+            ],
             'Country of origin of a trade item' => [
                 '0100614141007349422528[FNC1]',
                 '422',

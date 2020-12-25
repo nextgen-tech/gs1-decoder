@@ -13,25 +13,26 @@ class ApplicationIdentifiers
      * @var  string[]
      */
     protected static $identifiers = [
-        Identifiers\SSCCIdentifier::class,           // 00
-        Identifiers\GTINIdentifier::class,           // 01
-        Identifiers\ContentIdentifier::class,        // 02
-        Identifiers\BatchLotIdentifier::class,       // 10
-        Identifiers\ProductionDateIdentifier::class, // 11
-        Identifiers\DueDateIdentifier::class,        // 12
-        Identifiers\PackagingDateIdentifier::class,  // 13
-        Identifiers\BestBeforeDateIdentifier::class, // 15
-        Identifiers\SellByDateIdentifier::class,     // 16
-        Identifiers\ExpirationDateIdentifier::class, // 17
-        Identifiers\VariantIdentifier::class,        // 20
-        Identifiers\SerialNumberIdentifier::class,   // 21
+        Identifiers\SSCCIdentifier::class,                       // 00
+        Identifiers\GTINIdentifier::class,                       // 01
+        Identifiers\ContentIdentifier::class,                    // 02
+        Identifiers\BatchLotIdentifier::class,                   // 10
+        Identifiers\ProductionDateIdentifier::class,             // 11
+        Identifiers\DueDateIdentifier::class,                    // 12
+        Identifiers\PackagingDateIdentifier::class,              // 13
+        Identifiers\BestBeforeDateIdentifier::class,             // 15
+        Identifiers\SellByDateIdentifier::class,                 // 16
+        Identifiers\ExpirationDateIdentifier::class,             // 17
+        Identifiers\VariantIdentifier::class,                    // 20
+        Identifiers\SerialNumberIdentifier::class,               // 21
+        Identifiers\CompanyInternalInformationIdentifier::class, // 91
 
-        Identifiers\OriginIdentifier::class,         // 422
+        Identifiers\OriginIdentifier::class,                     // 422
 
-        Identifiers\NetWeightKgIdentifier::class,    // 3100 - 3105
-        Identifiers\PriceIdentifier::class,          // 3920 - 3929
-        Identifiers\PricePerUnitIdentifier::class,   // 8005
-        Identifiers\ProductionTimeIdentifier::class, // 8008
+        Identifiers\NetWeightKgIdentifier::class,                // 3100 - 3105
+        Identifiers\PriceIdentifier::class,                      // 3920 - 3929
+        Identifiers\PricePerUnitIdentifier::class,               // 8005
+        Identifiers\ProductionTimeIdentifier::class,             // 8008
     ];
 
     /**

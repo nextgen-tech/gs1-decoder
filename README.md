@@ -95,6 +95,7 @@ Array
 |     17    |      USE BY     | [Expiration date][AI-17]                                                                 |
 |     20    |     VARIANT     | [Internal product variant][AI-20]                                                        |
 |     21    |      SERIAL     | [Serial number][AI-21]                                                                   |
+|     91    |     INTERNAL    | [Company internal information][AI-91]                                                    |
 |    422    |      ORIGIN     | [Country of origin of a trade item][AI-422]                                              |
 | 3100-3105 | NET WEIGHT (kg) | [Net weight, kilograms][AI-3100]                                                         |
 | 3920-3929 |      PRICE      | [Applicable amount payable, single monetary area (variable measure trade item)][AI-3920] |
@@ -116,6 +117,7 @@ The list of all GS1 Application Identifiers can be found [here](https://www.gs1.
 [AI-17]: https://www.gs1.org/standards/barcodes/application-identifiers/17?lang=en
 [AI-20]: https://www.gs1.org/standards/barcodes/application-identifiers/20?lang=en
 [AI-21]: https://www.gs1.org/standards/barcodes/application-identifiers/21?lang=en
+[AI-91]: https://www.gs1.org/standards/barcodes/application-identifiers/91?lang=en
 [AI-422]: https://www.gs1.org/standards/barcodes/application-identifiers/422?lang=en
 [AI-3100]: https://www.gs1.org/standards/barcodes/application-identifiers/3100?lang=en
 [AI-3920]: https://www.gs1.org/standards/barcodes/application-identifiers/3920?lang=en
