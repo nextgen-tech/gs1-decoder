@@ -21,7 +21,7 @@ class VariableCountIdentifier extends Identifier implements VariableLength
      */
     public function getName(): string
     {
-        return 'Quantity or Units';
+        return 'Variable count of items';
     }
 
     /**
@@ -45,7 +45,7 @@ class VariableCountIdentifier extends Identifier implements VariableLength
      */
     public function getFormat(): string
     {
-        return $this->standardFormat('1,8');
+        return '/^\d{1,8}$/';
     }
 }
 

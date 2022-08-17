@@ -120,7 +120,17 @@ class DecodeTest extends TestCase
                 '01006141410073491714123110A12345B[FNC1]211234ABC[FNC1]',
                 '21',
                 '1234ABC',
-            ],
+	    ],
+	    'Consumer product variant' => [
+		'01006141410073491714123110A12345B[FNC1]22ABC1234[FNC1]',
+		'22',
+		'ABC1234'
+	    ],
+	    'Variable count of items [Numeric]' => [
+		'01006141410073491714123110A12345B[FNC1]300100[FNC1]',
+		'30',
+		'0100'
+	    ],
             'Company internal information' => [
                 '01087106420356209135[FNC1]',
                 '91',
