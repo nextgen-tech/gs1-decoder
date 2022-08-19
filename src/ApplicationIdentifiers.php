@@ -24,7 +24,9 @@ class ApplicationIdentifiers
         Identifiers\SellByDateIdentifier::class,                 // 16
         Identifiers\ExpirationDateIdentifier::class,             // 17
         Identifiers\VariantIdentifier::class,                    // 20
-        Identifiers\SerialNumberIdentifier::class,               // 21
+	Identifiers\SerialNumberIdentifier::class,               // 21
+	Identifiers\ConsumerVariantIdentifier::class,            // 22
+	Identifiers\VariableCountIdentifier::class,              // 30
         Identifiers\CompanyInternalInformationIdentifier::class, // 91
 
         Identifiers\OriginIdentifier::class,                     // 422
